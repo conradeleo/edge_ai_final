@@ -50,12 +50,11 @@ Lab4/
 └── upload_model.py # Script to upload model to HuggingFace
 ```
 
-### 使用硬體設施
-NVIDIA T4 (16GB VRAM) 就是助教提供的設備
+### Hardware Used
+- **NVIDIA T4 (16GB VRAM)** — Provided by the TA
 
-### 環境設置
-建議先建一個虛擬環境我們使用 .venv
-再進行下面設定
+### Environment Setup
+We recommend creating a virtual environment (e.g., `.venv`) before installation.
 ```
 # Install dependencies
 pip install datasets
@@ -65,21 +64,27 @@ pip install -r requirements.txt
 pip install .
 cd .. # turn back to Lab4 folder
 ```
-### 量化的步驟
-接下來所有步驟都在 Lab4 folder 執行
-
-### 下載 base_model
+Then, 登陸huggingface
 ```
+huggingface-cli login
+# 輸入自己的 KEY
+```
+
+### Quantization Steps
+All commands below should be executed inside the Lab4 folder.
+
+#### Download the Base Model
+```python
 python download_base_model.py
 ```
 
-### 下載 calibration dataset
-```
+#### Download the Calibration Dataset
+```base
 wget https://huggingface.co/datasets/Salesforce/wikitext/resolve/main/wikitext-2-raw-v1/train-00000-of-00001.parquet
 ```
 
-### 使用 exllamav2 提供的 convert.py 去進行量化跟轉為 EXL2 格式
-```
+#### Quantize the Model Using ExLlamaV2
+```bash
 python exllamav2/convert.py \
     -i models/Llama-3.2-3B-Instruct \                        # Path to the original (non-quantized) LLaMA model
     -o models/Llama-3.2-3B-Instruct-Quan-temp \              # Temporary output directory for intermediate quantization results
@@ -88,8 +93,9 @@ python exllamav2/convert.py \
     -b 2.8 \                                                 # Bit precision for quantization (2.8 bits in this case)
     -r 1100                                                  # The number of sample used in quantization; affects accuracy vs. efficiency tradeoff
 ```
-### 上傳至已經建立好的 huggingface 
-裡面的 repo_id 以及 folder_path 要記得更改
+
+#### Upload to Hugging Face
+Make sure to update `repo_id` and `folder_path` in the `upload_model.py` script before running.
 ```
 python upload_model.py
 ```
