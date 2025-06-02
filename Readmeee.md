@@ -12,8 +12,8 @@ Optimize the performance of `Llama3.2-3B-Instruct` for fast and efficient infere
 
 | Metric | Our Result |
 |--------|------------|
-| **Throughput** | **87.69 toks/s** |
-| **Perplexity** | **8.58** |
+| **Throughput** | **108.9 tokens/s** |
+| **Perplexity** | **10.95** |
 
 ## Technical Highlights
 
