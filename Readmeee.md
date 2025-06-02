@@ -115,7 +115,7 @@ After running the command, you should see a folder named `EAI_Final_model` appea
 
 #### 2. Running Inference
 Since we are using an NVIDIA T4 GPU, which does not support ExLlamaV2's paged attention,
-you must disable flash attention by setting the EXLLAMA_NO_FLASH_ATTN=1 environment variable:
+you must disable flash attention by setting the `EXLLAMA_NO_FLASH_ATTN=1` environment variable:
 ```bash
 EXLLAMA_NO_FLASH_ATTN=1 python inference_dynamic.py
 ```
