@@ -96,6 +96,7 @@ python exllamav2/convert.py \
 
 #### 4. Upload to Hugging Face
 Make sure to update `repo_id` and `folder_path` in the `upload_model.py` script before running.
+**Note:** The `folder_path` should match the directory you specified in the `-cf` argument above.
 ```
 python upload_model.py
 ```
