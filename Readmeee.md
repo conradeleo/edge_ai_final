@@ -5,31 +5,42 @@
 This is the final project for the **Edge AI** course.
 Our task is to **accelerate inference speed** for the `Llama3.2-3B-Instruct` model using various optimization techniques.
 
-## 👥 Team
+## Team
+- **Team 3**
 
-- Team 3
-
----
-
-## 🎯 Objective
+## Objective
 
 Optimize the performance of `Llama3.2-3B-Instruct` for fast and efficient inference without significantly compromising model quality (e.g., perplexity or generation quality).
 
----
+## Technical Highlights
 
-## ⚙️ Technical Highlights
-
-- ✅ Model: `Llama3.2-3B-Instruct`
-- ✅ Optimization techniques may include:
+- Model: `Llama3.2-3B-Instruct`
+- Optimization techniques may include:
   - GPTQ (Quantization)
-  - Exllama or ExllamaV2 backend
-  - TensorRT / ONNX acceleration
-  - KV Cache / FlashAttention
-  - Batch size tuning, token parallelism
+  - ExllamaV2 framework
 
-> 🔧 Techniques used in our final implementation will be documented in detail below.
+##  Methodology
 
----
+1. **Model & Dataset Preparation**  
+   - Downloaded the `Llama3.2-3B-Instruct` model  
+   - Downloaded the **WikiText-2** training dataset as the calibration set for GPTQ quantization
+
+2. **Quantization with GPTQ**  
+   - Performed **2.8-bit quantization** via the **ExLlamaV2 GPTQ converter**  
+   - Used **1100 samples** from WikiText-2, each with **2048+ tokens** for calibration  
+
+3. **Inference with ExLlamaV2**  
+   - Loaded the quantized model into the **ExLlamaV2** framework
+   - Performed inference using the built-in **dynamic generator** provided by ExLlamaV2
+
+4. **Results**  
+   - **Throughput**: 108.9 tokens/second  
+   - **Perplexity**: 10.95
+
+| Metric | Our Result |
+|--------|------------|
+| **Throughput** | **108.9 tokens/s** |
+| **Perplexity** | **10.95** | ≤ 11.5 (required) |
 
 ## 📦 Environment Setup
 
