@@ -34,10 +34,8 @@ Optimize the performance of `Llama3.2-3B-Instruct` for fast and efficient infere
 4. **Results**  
    - **Throughput**: 108.9 tokens/s
    - **Perplexity**: 10.95 (≤ 11.5)
-   
-## Reproducing the Experiment
 
-### Project Directory Structure
+## Project Directory Structure
 ```bash
 Lab4/
 ├── exllamav2/ # Cloned from GitHub
@@ -50,8 +48,10 @@ Lab4/
 └── upload_model.py # Script to upload model to HuggingFace
 ```
 
-### Hardware Used
+## Hardware Used
 - **NVIDIA T4 (16GB VRAM)** — Provided by the TA
+
+## Reproducing the Experiment
 
 ### Environment Setup
 We recommend creating a virtual environment (e.g., `.venv`) before installation.
@@ -101,3 +101,4 @@ Make sure to update `repo_id` and `folder_path` in the `upload_model.py` script 
 ```
 python upload_model.py
 ```
+
