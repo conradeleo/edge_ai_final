@@ -64,10 +64,10 @@ pip install -r requirements.txt
 pip install .
 cd .. # turn back to Lab4 folder
 ```
-Then, 登陸huggingface
+Then, login to Hugging Face:
 ```
 huggingface-cli login
-# 輸入自己的 KEY
+# Enter your Hugging Face access token when prompted
 ```
 
 ### Quantization Steps
