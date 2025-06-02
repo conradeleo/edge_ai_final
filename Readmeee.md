@@ -48,6 +48,8 @@ Lab4/
 ├── inference_dynamic.py # 用我們的模型進行推論
 └── upload_model.py # 上傳我們量化的模型到 huggingface 使用
 
+<pre lang="markdown"> ```plaintext Lab4/ ├── exllamav2/ # Cloned from GitHub ├── models/ │ ├── EAI_Final_model/ # Pre-quantized model (optional) │ └── Llama-3.2-3B-Instruct/ # Base model ├── download_base_model.py # Script to download the base model ├── download_model.py # Script to download the quantized model ├── inference_dynamic.py # Script for inference using ExLlamaV2 └── upload_model.py # Script to upload model to Hugging Face ``` </pre>
+
 ### 使用硬體設施
 NVIDIA T4 (16GB VRAM) 就是助教提供的設備
 
