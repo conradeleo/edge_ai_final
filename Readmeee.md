@@ -69,7 +69,7 @@ Then, login to Hugging Face:
 huggingface-cli login
 # Enter your Hugging Face access token when prompted
 ```
-
+-------
 ### Quantization Steps
 All commands below should be executed inside the Lab4 folder.
 
