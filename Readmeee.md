@@ -1,4 +1,4 @@
-# Final Project
+# Final Project - Edge AI
 
 This is the final project for the **Edge AI** course.
 
@@ -21,6 +21,7 @@ Optimize the performance of `Llama3.2-3B-Instruct` for fast and efficient infere
 |--------|------------|
 | **Throughput** | **87.69 toks/s** |
 | **Perplexity** | **8.58** |
+
 ## Technical Highlights
 
 - Model: `Llama3.2-3B-Instruct`
@@ -134,4 +135,4 @@ EXLLAMA_NO_FLASH_ATTN=1 python inference_dynamic.py
 - **Original Model**: [Meta Llama3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct)
 - **Our model**: [EAI_final_model](https://huggingface.co/Fang77777/EAI_Final_model)
 - **ExLlamaV2**: [GitHub](https://github.com/turboderp/exllamav2)
-- **WikiText-2 Dataset**:  [WikiText-2](https://huggingface.co/datasets/Salesforce/wikitext)- 
+- **WikiText-2 Dataset**:  [WikiText-2](https://huggingface.co/datasets/Salesforce/wikitext)
