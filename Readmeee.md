@@ -1,10 +1,10 @@
 # Final Project
 
 This is the final project for the **Edge AI** course.
+
 Our task is to **accelerate inference speed** for the `Llama3.2-3B-Instruct` model using various optimization techniques.
 
-## Team
-- **Team 3**
+## Team 3
 - **Team Members**
   - 110701018 張周芳
   - 110705009 陳重光
@@ -15,6 +15,12 @@ Our task is to **accelerate inference speed** for the `Llama3.2-3B-Instruct` mod
 
 Optimize the performance of `Llama3.2-3B-Instruct` for fast and efficient inference without significantly compromising model quality (e.g., perplexity or generation quality).
 
+## Final Result
+
+| Metric | Our Result |
+|--------|------------|
+| **Throughput** | **87.69 toks/s** |
+| **Perplexity** | **8.58** |
 ## Technical Highlights
 
 - Model: `Llama3.2-3B-Instruct`
