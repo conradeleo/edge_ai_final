@@ -35,19 +35,19 @@ Optimize the performance of `Llama3.2-3B-Instruct` for fast and efficient infere
    - **Throughput**: 108.9 tokens/s
    - **Perplexity**: 10.95 (≤ 11.5)
    
-## 重新復現實驗過程
+## Reproducing the Experiment
 
 ### Project Directory Structure
 ```bash
 Lab4/
-├── exllamav2/ # 會使用 git 進行下載
+├── exllamav2/ # Cloned from GitHub
 ├── models/
-│   ├── EAI_Final_model/ # 如果直接下載我們已經量化的模型
-│   └── Llama-3.2-3B-Instruct/ # 這個是 base_model
-├── download_base_model.py # 用來下載 base_model
-├── download_model.py # 用來下載 EAI_Final_model
-├── inference_dynamic.py # 用我們的模型進行推論
-└── upload_model.py # 上傳我們量化的模型到 huggingface 使用
+│ ├── EAI_Final_model/ # Our Pre-quantized model (Download using `download_base_model.py`)
+│ └── Llama-3.2-3B-Instruct/ # Base model (Download using `download_our_model.py`)
+├── download_base_model.py # Script to download the base model
+├── download_our_model.py # Script to download the our quantized model (EAL_final_model)
+├── inference_dynamic.py # Script for inference using ExLlamaV2 dynamic generator
+└── upload_model.py # Script to upload model to HuggingFace
 ```
 
 ### 使用硬體設施
