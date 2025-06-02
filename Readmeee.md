@@ -55,7 +55,7 @@ Lab4/
 
 ### Environment Setup
 We recommend creating a virtual environment (e.g., `.venv`) before installation.
-```
+```bash
 # Install dependencies
 pip install datasets
 git clone https://github.com/turboderp/exllamav2.git
@@ -65,7 +65,7 @@ pip install .
 cd .. # turn back to Lab4 folder
 ```
 Then, login to Hugging Face:
-```
+```bash
 huggingface-cli login
 # Enter your Hugging Face access token when prompted
 ```
@@ -74,12 +74,12 @@ huggingface-cli login
 All commands below should be executed inside the Lab4 folder.
 
 #### 1. Download the Base Model
-```python
+```bash
 python download_base_model.py
 ```
 
 #### 2. Download the Calibration Dataset
-```base
+```bash
 wget https://huggingface.co/datasets/Salesforce/wikitext/resolve/main/wikitext-2-raw-v1/train-00000-of-00001.parquet
 ```
 
@@ -98,7 +98,25 @@ python exllamav2/convert.py \
 Make sure to update `repo_id` and `folder_path` in the `upload_model.py` script before running.
 
 **Note:** The `folder_path` should match the directory you specified in the `-cf` argument above.
-```
+```bash
 python upload_model.py
+```
+-------
+### Inference Steps
+All the following steps should be executed in the `Lab4` directory using Bash. Make sure the environment is set up properly. 
+
+In this case, we will demonstrate how to run inference using our pre-quantized model `EAI_Final_model`.
+
+#### 1. Download the Our Pre-quantized Model (EAI_final_model)
+```bash
+python download_our_model.py
+```
+After running the command, you should see a folder named `EAI_Final_model` appear under the `models/` directory.
+
+#### 2. Running Inference
+Since we are using an NVIDIA T4 GPU, which does not support ExLlamaV2's paged attention,
+you must disable flash attention by setting the EXLLAMA_NO_FLASH_ATTN=1 environment variable:
+```bash
+EXLLAMA_NO_FLASH_ATTN=1 python inference_dynamic.py
 ```
 
