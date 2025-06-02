@@ -5,6 +5,11 @@ Our task is to **accelerate inference speed** for the `Llama3.2-3B-Instruct` mod
 
 ## Team
 - **Team 3**
+- **Team Members**
+  - 110701018 張周芳
+  - 110705009 陳重光
+  - 111550029 蔡奕庠
+  - 111705069 劉冠言
 
 ## Objective
 
@@ -119,4 +124,8 @@ you must disable flash attention by setting the `EXLLAMA_NO_FLASH_ATTN=1` enviro
 ```bash
 EXLLAMA_NO_FLASH_ATTN=1 python inference_dynamic.py
 ```
-
+## Resources
+- **Original Model**: [Meta Llama3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct)
+- **ExLlamaV2**: [GitHub](https://github.com/turboderp/exllamav2)
+- **WikiText-2 Dataset**: https://huggingface.co/datasets/Salesforce/wikitext
+- 
