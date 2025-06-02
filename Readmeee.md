@@ -73,17 +73,17 @@ huggingface-cli login
 ### Quantization Steps
 All commands below should be executed inside the Lab4 folder.
 
-#### Download the Base Model
+#### 1. Download the Base Model
 ```python
 python download_base_model.py
 ```
 
-#### Download the Calibration Dataset
+#### 2. Download the Calibration Dataset
 ```base
 wget https://huggingface.co/datasets/Salesforce/wikitext/resolve/main/wikitext-2-raw-v1/train-00000-of-00001.parquet
 ```
 
-#### Quantize the Model Using ExLlamaV2
+#### 3. Quantize the Model Using ExLlamaV2
 ```bash
 python exllamav2/convert.py \
     -i models/Llama-3.2-3B-Instruct \                        # Path to the original (non-quantized) LLaMA model
@@ -94,13 +94,8 @@ python exllamav2/convert.py \
     -r 1100                                                  # The number of sample used in quantization; affects accuracy vs. efficiency tradeoff
 ```
 
-#### Upload to Hugging Face
+#### 4. Upload to Hugging Face
 Make sure to update `repo_id` and `folder_path` in the `upload_model.py` script before running.
 ```
 python upload_model.py
 ```
-
-**Install dependencies**:
-
-```bash
-pip install -r requirements.txt
