@@ -1,12 +1,9 @@
-# 🚀 LLM Acceleration Final Project
+# Final Project
 
-## 🧠 Project Overview
+## Project Overview
 
-This is the final project for the **LLM Acceleration** course.
-
+This is the final project for the **Edge AI** course.
 Our task is to **accelerate inference speed** for the `Llama3.2-3B-Instruct` model using various optimization techniques.
-
----
 
 ## 👥 Team
 
