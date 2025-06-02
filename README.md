@@ -70,6 +70,10 @@ cd exllamav2
 pip install -r requirements.txt
 pip install .
 cd .. # turn back to Lab4 folder
+
+# Create a 'models' folder to store the models
+mkdir models
+
 ```
 Then, login to Hugging Face:
 ```bash
