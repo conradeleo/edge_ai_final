@@ -51,7 +51,7 @@ Lab4/
 ├── download_our_model.py # Script to download the our quantized model (EAL_final_model)
 ├── inference_dynamic.py # Script for inference using ExLlamaV2 dynamic generator
 ├── upload_model.py # Script to upload model to HuggingFace
-├── result.csv # our final result file
+├── result.csv # Our final result file
 └── train-00000-of-00001.parquet # Calibration dataset (Download manually with `wget`)
 ```
 
