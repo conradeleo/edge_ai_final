@@ -33,12 +33,10 @@ Optimize the performance of `Llama3.2-3B-Instruct` for fast and efficient infere
    - Loaded the quantized model into the **ExLlamaV2** framework
    - Performed inference using the built-in **dynamic generator** provided by ExLlamaV2
 
-4. **Results**
-| Metric | Our Result |
-|--------|------------|
-| **Throughput** | **108.9 tokens/s** |
-| **Perplexity** | **10.95** | ≤ 11.5 (required) |
-
+4. **Results**  
+   - **Throughput**: 108.9 tokens/s
+   - **Perplexity**: 10.95 (≤ 11.5)
+   
 ## 📦 Environment Setup
 
 **Requirements**:
